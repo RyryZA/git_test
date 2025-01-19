@@ -1,0 +1,318 @@
+[
+    {
+        "key": "group_services",
+        "title": "Service Fields",
+        "fields": [
+            {
+                "key": "field_service_overview",
+                "label": "Service Overview",
+                "name": "service_overview",
+                "type": "wysiwyg"
+            },
+            {
+                "key": "field_service_features",
+                "label": "Key Features",
+                "name": "service_features",
+                "type": "repeater",
+                "sub_fields": [
+                    {
+                        "key": "field_feature",
+                        "label": "Feature",
+                        "name": "feature",
+                        "type": "text"
+                    },
+                    {
+                        "key": "field_feature_description",
+                        "label": "Feature Description",
+                        "name": "feature_description",
+                        "type": "textarea"
+                    }
+                ]
+            },
+            {
+                "key": "field_service_related_industries",
+                "label": "Related Industries",
+                "name": "related_industries",
+                "type": "relationship",
+                "post_type": ["industries"]
+            },
+            {
+                "key": "field_service_related_locations",
+                "label": "Related Locations",
+                "name": "related_locations",
+                "type": "relationship",
+                "post_type": ["locations"]
+            },
+            {
+                "key": "field_service_related_portfolio",
+                "label": "Related Portfolio Projects",
+                "name": "related_portfolio",
+                "type": "relationship",
+                "post_type": ["portfolio"]
+            },
+            {
+                "key": "field_service_related_blog",
+                "label": "Related Blog Posts",
+                "name": "related_blog",
+                "type": "post_object",
+                "post_type": ["post"],
+                "multiple": 1
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "services"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "group_industries",
+        "title": "Industry Fields",
+        "fields": [
+            {
+                "key": "field_industry_overview",
+                "label": "Industry Overview",
+                "name": "industry_overview",
+                "type": "wysiwyg"
+            },
+            {
+                "key": "field_industry_image",
+                "label": "Industry Image",
+                "name": "industry_image",
+                "type": "image"
+            },
+            {
+                "key": "field_industry_challenges",
+                "label": "Key Challenges",
+                "name": "industry_challenges",
+                "type": "repeater",
+                "sub_fields": [
+                    {
+                        "key": "field_challenge",
+                        "label": "Challenge",
+                        "name": "challenge",
+                        "type": "text"
+                    },
+                    {
+                        "key": "field_solution",
+                        "label": "Solution",
+                        "name": "solution",
+                        "type": "textarea"
+                    }
+                ]
+            },
+            {
+                "key": "field_industry_relevant_services",
+                "label": "Relevant Services",
+                "name": "relevant_services",
+                "type": "relationship",
+                "post_type": ["services"]
+            },
+            {
+                "key": "field_industry_related_portfolio",
+                "label": "Related Portfolio",
+                "name": "related_portfolio",
+                "type": "relationship",
+                "post_type": ["portfolio"]
+            },
+            {
+                "key": "field_industry_cta",
+                "label": "Call to Action",
+                "name": "cta",
+                "type": "text"
+            },
+            {
+                "key": "field_industry_cta_link",
+                "label": "CTA Link",
+                "name": "cta_link",
+                "type": "url"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "industries"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "group_locations",
+        "title": "Location Fields",
+        "fields": [
+            {
+                "key": "field_location_description",
+                "label": "Location Description",
+                "name": "location_description",
+                "type": "wysiwyg"
+            },
+            {
+                "key": "field_location_image",
+                "label": "Location Image",
+                "name": "location_image",
+                "type": "image"
+            },
+            {
+                "key": "field_location_services",
+                "label": "Available Services",
+                "name": "available_services",
+                "type": "relationship",
+                "post_type": ["services"]
+            },
+            {
+                "key": "field_location_testimonials",
+                "label": "Client Testimonials",
+                "name": "client_testimonials",
+                "type": "repeater",
+                "sub_fields": [
+                    {
+                        "key": "field_client_name",
+                        "label": "Client Name",
+                        "name": "client_name",
+                        "type": "text"
+                    },
+                    {
+                        "key": "field_testimonial",
+                        "label": "Testimonial",
+                        "name": "testimonial",
+                        "type": "textarea"
+                    }
+                ]
+            },
+            {
+                "key": "field_location_related_portfolio",
+                "label": "Portfolio Projects",
+                "name": "related_portfolio",
+                "type": "relationship",
+                "post_type": ["portfolio"]
+            },
+            {
+                "key": "field_location_contact_info",
+                "label": "Contact Info",
+                "name": "contact_info",
+                "type": "group",
+                "sub_fields": [
+                    {
+                        "key": "field_location_phone",
+                        "label": "Phone",
+                        "name": "phone",
+                        "type": "text"
+                    },
+                    {
+                        "key": "field_location_email",
+                        "label": "Email",
+                        "name": "email",
+                        "type": "email"
+                    },
+                    {
+                        "key": "field_location_cta",
+                        "label": "Location-Specific CTA",
+                        "name": "location_cta",
+                        "type": "text"
+                    },
+                    {
+                        "key": "field_location_cta_link",
+                        "label": "CTA Link",
+                        "name": "location_cta_link",
+                        "type": "url"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "locations"
+                }
+            ]
+        ]
+    },
+    {
+        "key": "group_portfolio",
+        "title": "Portfolio Fields",
+        "fields": [
+            {
+                "key": "field_project_overview",
+                "label": "Project Overview",
+                "name": "project_overview",
+                "type": "wysiwyg"
+            },
+            {
+                "key": "field_project_images",
+                "label": "Project Images",
+                "name": "project_images",
+                "type": "gallery"
+            },
+            {
+                "key": "field_project_service",
+                "label": "Service Provided",
+                "name": "service_provided",
+                "type": "relationship",
+                "post_type": ["services"]
+            },
+            {
+                "key": "field_project_industry",
+                "label": "Industry",
+                "name": "industry",
+                "type": "relationship",
+                "post_type": ["industries"]
+            },
+            {
+                "key": "field_project_location",
+                "label": "Project Location",
+                "name": "project_location",
+                "type": "relationship",
+                "post_type": ["locations"]
+            },
+            {
+                "key": "field_project_testimonial",
+                "label": "Client Testimonial",
+                "name": "client_testimonial",
+                "type": "textarea"
+            },
+            {
+                "key": "field_project_results",
+                "label": "Results and Metrics",
+                "name": "results_metrics",
+                "type": "repeater",
+                "sub_fields": [
+                    {
+                        "key": "field_metric_title",
+                        "label": "Metric Title",
+                        "name": "metric_title",
+                        "type": "text"
+                    },
+                    {
+                        "key": "field_metric_value",
+                        "label": "Metric Value",
+                        "name": "metric_value",
+                        "type": "text"
+                    }
+                ]
+            },
+            {
+                "key": "field_project_timeline",
+                "label": "Project Timeline",
+                "name": "project_timeline",
+                "type": "date_picker"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "portfolio"
+                }
+            ]
+        ]
+    }
+]
